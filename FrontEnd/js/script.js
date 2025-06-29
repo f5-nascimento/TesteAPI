@@ -1,3 +1,6 @@
+const apiUrl = 'https://teste-api-xi.vercel.app/usuarios';
+
+
 document.getElementById('cadastrar').addEventListener('click', async () => {
   const nome = document.getElementById('nome').value;
 
@@ -7,7 +10,7 @@ document.getElementById('cadastrar').addEventListener('click', async () => {
   }
 
   try {
-    const response = await fetch('https://teste-api-xi.vercel.app/usuarios', {
+    const response = await fetch(`${apiUrl}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
