@@ -1,3 +1,9 @@
+if (localStorage.getItem('autenticado') !== 'true') {
+  alert('Acesso não autorizado.');
+  window.location.href = 'index.html'; // redireciona para login
+}
+
+
 const apiUrl = 'https://teste-api-xi.vercel.app/usuarios';
 
 
