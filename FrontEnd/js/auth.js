@@ -1,3 +1,4 @@
+const apiUrl = 'https://teste-api-xi.vercel.app/login';
 document.getElementById('entrar').addEventListener('click', async () => {
   const nome = document.getElementById('nome').value;
   const id = document.getElementById('id').value;
@@ -8,7 +9,7 @@ document.getElementById('entrar').addEventListener('click', async () => {
   }
 
   try {
-    const response = await fetch('https://teste-api-xi.vercel.app/login', {
+    const response = await fetch(`${apiUrl}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nome, id })
