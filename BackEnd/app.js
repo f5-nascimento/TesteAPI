@@ -33,12 +33,6 @@ app.post('/usuarios', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`API rodando na porta ${PORT}`);
-});
-
-
 //login local
 app.post('/login', async (req, res) => {
   const { nome, id } = req.body;
